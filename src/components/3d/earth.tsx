@@ -34,33 +34,33 @@ function EarthMesh({ mouseX, mouseY, isPaused, isNight }: { mouseX: number; mous
   });
 
   return (
-    <group ref={groupRef} rotation={[0, 4.5, 0]}>
+    <group ref={groupRef} rotation={[0.2, 1.5, 0]}>
       {/* Main Planet Body */}
       <Sphere ref={meshRef} args={[2.2, 64, 64]}>
-        <meshPhongMaterial
+        <meshStandardMaterial
           map={colorMap}
           normalMap={normalMap}
-          specularMap={specularMap}
-          normalScale={new THREE.Vector2(0.5, 0.5)}
-          shininess={15}
+          roughness={0.6}
+          metalness={0.1}
         />
       </Sphere>
       
       {/* Atmosphere Glow */}
       <Sphere ref={atmosphereRef} args={[2.3, 64, 64]}>
-        <meshPhongMaterial
+        <meshStandardMaterial
           color="#4da6ff"
           transparent
           opacity={0.15}
           side={THREE.BackSide}
           blending={THREE.AdditiveBlending}
+          depthWrite={false}
         />
       </Sphere>
       
       {/* Lighting */}
-      <directionalLight position={[-10, 10, 5]} intensity={isNight ? 0.1 : 1.5} color={isNight ? "#4da6ff" : "#ffffff"} />
-      <pointLight position={[10, 5, 10]} intensity={isNight ? 0.1 : 0.5} color="#4da6ff" />
-      <ambientLight intensity={isNight ? 0.02 : 0.05} />
+      <directionalLight position={[-5, 5, 10]} intensity={isNight ? 0.2 : 2.5} color={isNight ? "#4da6ff" : "#ffffff"} />
+      <pointLight position={[10, 5, 10]} intensity={isNight ? 0.2 : 1.0} color="#4da6ff" />
+      <ambientLight intensity={isNight ? 0.05 : 0.4} />
     </group>
   );
 }
