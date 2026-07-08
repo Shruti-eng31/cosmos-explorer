@@ -197,8 +197,7 @@ export function SolarSystem3D({
 }) {
   return (
     <div className={className}>
-      <Canvas camera={{ position: [0, 10, 25], fov: 45 }} dpr={[1, 2]}>
-        <color attach="background" args={["transparent"]} />
+      <Canvas camera={{ position: [0, 20, 30], fov: 50 }} dpr={[1, 1.5]}>
         <Stars radius={100} depth={50} count={3000} factor={4} saturation={0} fade speed={1} />
         
         <pointLight position={[0, 0, 0]} intensity={3} color="#fffcf5" distance={100} decay={1.5} />

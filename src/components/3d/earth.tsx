@@ -77,7 +77,6 @@ export function Earth3D({ mouseX = 0, mouseY = 0, className, isPaused = false, i
   return (
     <div className={className}>
       <Canvas camera={{ position: [0, 0, 6], fov: 45 }} dpr={[1, 2]}>
-        <color attach="background" args={["transparent"]} />
         <Stars radius={100} depth={50} count={3000} factor={4} saturation={0} fade speed={1} />
         <Suspense fallback={null}>
           <EarthMesh mouseX={mouseX} mouseY={mouseY} isPaused={isPaused} isNight={isNight} />
