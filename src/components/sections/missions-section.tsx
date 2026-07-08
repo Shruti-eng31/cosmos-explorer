@@ -71,7 +71,7 @@ export function MissionsSection() {
 
   return (
     <section id="missions" className="section-padding relative">
-      <div className="container mx-auto px-6">
+      <div className="section-container">
         <SectionHeader
           label="Human Achievement"
           title="Space Missions"

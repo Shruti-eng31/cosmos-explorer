@@ -41,7 +41,7 @@ function PlanetFullscreen({ planet, onClose }: { planet: Planet; onClose: () => 
         </div>
       </div>
 
-      <div className="container mx-auto px-6 py-12 max-w-4xl">
+      <div className="section-container py-12 max-w-4xl">
         <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8">{planet.description}</p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
@@ -88,7 +88,7 @@ export function PlanetsSection() {
 
   return (
     <section id="planets" className="section-padding relative">
-      <div className="container mx-auto px-6">
+      <div className="section-container">
         <SectionHeader
           label="Worlds Beyond"
           title="Discover the Planets"

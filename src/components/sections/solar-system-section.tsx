@@ -56,7 +56,7 @@ export function SolarSystemSection() {
 
   return (
     <section id="solar-system" className="section-padding relative aurora-bg">
-      <div className="container mx-auto px-6">
+      <div className="section-container">
         <SectionHeader
           label="Our Neighborhood"
           title="3D Solar System"
@@ -68,7 +68,7 @@ export function SolarSystemSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden gradient-border bg-[#030508]"
+          className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden gradient-border bg-[#030508]"
         >
           <SolarSystem3D
             className="w-full h-full"

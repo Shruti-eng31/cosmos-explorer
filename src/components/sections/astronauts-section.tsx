@@ -12,7 +12,7 @@ export function AstronautsSection() {
 
   return (
     <section id="astronauts" className="section-padding aurora-bg relative">
-      <div className="container mx-auto px-6">
+      <div className="section-container">
         <SectionHeader
           label="Heroes of Space"
           title="Astronauts"

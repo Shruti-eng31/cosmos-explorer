@@ -16,7 +16,7 @@ export function GallerySection() {
 
   return (
     <section id="gallery" className="section-padding relative">
-      <div className="container mx-auto px-6">
+      <div className="section-container">
         <SectionHeader
           label="Cosmic Beauty"
           title="Gallery"

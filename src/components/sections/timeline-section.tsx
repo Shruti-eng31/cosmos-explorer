@@ -14,7 +14,7 @@ export function TimelineSection() {
 
   return (
     <section id="timeline" className="section-padding aurora-bg relative overflow-hidden">
-      <div className="container mx-auto px-6 mb-12">
+      <div className="section-container mb-12">
         <SectionHeader
           label="Our Journey"
           title="Space Timeline"

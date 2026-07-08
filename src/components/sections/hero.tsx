@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import { Play, Rocket } from "lucide-react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -36,7 +36,7 @@ export function Hero() {
   const primaryBtnRef = useMagnetic(0.25);
   const secondaryBtnRef = useMagnetic(0.25);
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
       opacity: 1,

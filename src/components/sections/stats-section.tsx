@@ -45,7 +45,7 @@ function StatCard({ label, value, suffix, delay }: { label: string; value: numbe
 export function StatsSection() {
   return (
     <section id="stats" className="section-padding aurora-bg relative">
-      <div className="container mx-auto px-6">
+      <div className="section-container">
         <SectionHeader
           label="By the Numbers"
           title="Space Statistics"

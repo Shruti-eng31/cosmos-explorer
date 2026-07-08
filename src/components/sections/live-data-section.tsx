@@ -59,7 +59,7 @@ export function LiveDataSection() {
 
   return (
     <section id="live-data" className="section-padding aurora-bg relative">
-      <div className="container mx-auto px-6">
+      <div className="section-container">
         <SectionHeader
           label="Real-Time Cosmos"
           title="Live Space Data"

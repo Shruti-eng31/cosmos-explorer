@@ -17,7 +17,7 @@ export function EarthViewerSection() {
 
   return (
     <section id="earth" className="section-padding relative">
-      <div className="container mx-auto px-6">
+      <div className="section-container">
         <SectionHeader
           label="Our Home"
           title="3D Earth Experience"
@@ -27,8 +27,7 @@ export function EarthViewerSection() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden gradient-border"
+          className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden gradient-border"
         >
           <Earth3D className="w-full h-full" isPaused={paused} isNight={!showDayNight} />
 

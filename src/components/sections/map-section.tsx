@@ -33,7 +33,7 @@ export function MapSection() {
 
   return (
     <section id="map" className="section-padding relative">
-      <div className="container mx-auto px-6">
+      <div className="section-container">
         <SectionHeader
           label="Global Network"
           title="Space Map"
