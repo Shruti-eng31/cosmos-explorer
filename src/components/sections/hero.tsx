@@ -50,7 +50,7 @@ export function Hero() {
   };
 
   return (
-    <section ref={containerRef} className="relative h-screen min-h-[700px] overflow-hidden flex flex-col justify-center bg-black text-white">
+    <section ref={containerRef} className="relative h-[100dvh] min-h-[600px] md:min-h-[700px] overflow-hidden flex flex-col justify-center text-white" style={{ backgroundColor: "#000" }}>
       {/* Remove aurora-bg temporarily as it relies on CSS variables that may be white in light mode */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#05070d] via-[#0a0f1d] to-[#05070d] opacity-90" />
       
@@ -58,23 +58,23 @@ export function Hero() {
 
       <motion.div style={{ scale, opacity, y }} className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center">
         <Earth3D
-          className="w-full h-full transform translate-y-[20%] scale-[1.2] md:scale-100"
+          className="w-full h-full transform translate-y-[35%] md:translate-y-[20%] scale-90 md:scale-[1.1]"
           mouseX={normalizedX}
           mouseY={normalizedY}
         />
       </motion.div>
 
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-center pointer-events-none">
-        <motion.div className="max-w-5xl pointer-events-auto w-full px-4">
-          <motion.span
+        <motion.div className="max-w-5xl pointer-events-auto w-full px-4 flex flex-col items-center z-30">
+          <motion.div
             custom={0}
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="absolute top-[12vh] md:top-[16vh] left-0 right-0 w-full text-center inline-block text-xs md:text-sm lg:text-base font-semibold tracking-[0.3em] uppercase text-[#4da6ff] drop-shadow-md"
+            className="mb-4 md:mb-6 text-xs sm:text-sm md:text-base font-semibold tracking-[0.2em] uppercase text-[#4da6ff] drop-shadow-md"
           >
-            Welcome to the Cosmos
-          </motion.span>
+            Welcome to the Cosmos ✨
+          </motion.div>
 
           <motion.h1
             custom={1}
